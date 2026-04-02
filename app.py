@@ -1,6 +1,6 @@
 from flask import Flask, request
 import sqlite3
-imoport os
+import os
 app = Flask(__name__)
 
 # 🔹 Establishing connection to SQLite database
