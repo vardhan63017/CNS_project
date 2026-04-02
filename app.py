@@ -1,6 +1,6 @@
 from flask import Flask, request
 import sqlite3
-
+imoport os
 app = Flask(__name__)
 
 # 🔹 Establishing connection to SQLite database
@@ -122,5 +122,8 @@ def check_login():
 
 
 # 🔹 Running the Flask application
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
